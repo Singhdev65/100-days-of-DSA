@@ -1,17 +1,29 @@
-<h1 align="center">100 days of code</h1>
-<h2 align="center">Coding is Fun! Do it everyday 💯💯<h2>
-<table cellspacing="0" border="0" align="center">
-	<colgroup width="85"></colgroup>
-	<colgroup width="138"></colgroup>
-	<colgroup width="423"></colgroup>
-	<tr>
-		<td height="17" align="left"><b>Day</b></td>
-		<td align="left"><b>Question</b></td>
-		<td align="left"><b>Solution</b></td>
-	</tr>
-	<tr>
-		<td height="121" align="right" sdval="1" sdnum="16393;">1</td>
-		<td align="left"><a href="https://leetcode.com/problems/valid-palindrome/">Valid Palindrome</a></td>
-		<td align="left">var isPalindrome = function(s) {<br>    const string = s.replace(/[^A-Z0-9]/ig, &quot;&quot;).toLowerCase();<br>    const reverseString = string.split(&quot;&quot;).reverse().join(&quot;&quot;);<br><br>    if(string !== reverseString)  return false;<br><br>    return true<br>};</td>
-	</tr>
-</table>
+<h1 align="center">100 days of DSA</h1>
+<h2 align="center">DSA is Fun! Do it everyday 💯💯</h2>
+
+### Table of Contents
+
+
+| Day Number | Topic | Link | Difficulty |
+| ---------- | ----- | ---- | ---------: |
+|      1     |     String |  [Valid Palindrome](#given-a-string-s-return-true-if-it-is-a-palindrome-or-false-otherwise) |**Beginner**|
+
+
+1. ### Given a string s, return true if it is a palindrome, or false otherwise
+
+  ```javascript
+function Palindrome(s){
+    const string = s.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+    const reverseString = string.split("").reverse().join("");
+
+    if(string !== reverseString)  return false;
+
+    return true
+}
+
+console.log(Palindrome("")) //true
+console.log(Palindrome("race a car")) //false
+console.log(Palindrome("A man, a plan, a canal: Panama")) //true
+console.log(Palindrome("#% A %&  man, a plan, a canal: &&Pan&^&ama")) // true
+ ```
+   **[⬆ Back to Top](#table-of-contents)**
