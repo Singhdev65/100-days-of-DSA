@@ -71,4 +71,4 @@ function Anagram(s, t) {
 }
 ```
 
-     **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
