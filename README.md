@@ -44,32 +44,31 @@ function Palindrome(s) {
 
 2.  ### Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
-````javascript
+```javascript
 function Anagram(s, t) {
-if (s.length !== t.length) {
-  return false
-}
-
-const charCount = {}
-
-for (let char of s) {
-  if (charCount[char]) {
-    charCount[char] += 1
-  } else {
-    charCount[char] = 1
-  }
-}
-
-for (let char of t) {
-  if (!charCount[char]) {
+  if (s.length !== t.length) {
     return false
   }
-  charCount[char]--
-}
 
-return true
+  const charCount = {}
+
+  for (let char of s) {
+    if (charCount[char]) {
+      charCount[char] += 1
+    } else {
+      charCount[char] = 1
+    }
+  }
+
+  for (let char of t) {
+    if (!charCount[char]) {
+      return false
+    }
+    charCount[char]--
+  }
+
+  return true
 }
-   ```
+```
 
      **[⬆ Back to Top](#table-of-contents)**
-````
