@@ -3,10 +3,11 @@
 
 ### Table of Contents
 
-| Day Number | Topic  | Link                                                                                                |   Difficulty |
-| ---------- | ------ | --------------------------------------------------------------------------------------------------- | -----------: |
-| 1          | String | [Valid Palindrome](#given-a-string-s-return-true-if-it-is-a-palindrome-or-false-otherwise)          | **Beginner** |
-| 2          | String | [Valid Anagram](#given-two-strings-s-and-t-return-true-if-t-is-an-anagram-of-s-and-false-otherwise) | **Beginner** |
+| Day Number | Topic  | Link                                                                                                                                       |   Difficulty |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------ | -----------: |
+| 1          | String | [Valid Palindrome](#given-a-string-s-return-true-if-it-is-a-palindrome-or-false-otherwise)                                                 | **Beginner** |
+| 2          | String | [Valid Anagram](#given-two-strings-s-and-t-return-true-if-t-is-an-anagram-of-s-and-false-otherwise)                                        | **Beginner** |
+| 3          | String | [Valid Parentheses](<#given-a-string-s-containing-just-the-characters-'('-')'-'{'-'}'-'['-and-']'-determine-if-the-input-string-is-valid>) | **Beginner** |
 
 1. ### Given a string s, return true if it is a palindrome, or false otherwise
 
@@ -69,6 +70,26 @@ function Anagram(s, t) {
 
   return true
 }
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+3.  ### Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+```javascript
+function validParentheses(str) {
+  let length
+
+  do {
+    length = str.length
+    str = str.replace("()", "").replace("{}", "").replace("[]", "")
+  } while (length !== str.length)
+  return str.length === 0
+}
+
+console.log(validParentheses("()")) //true
+console.log(validParentheses("()[]{}")) //true
+console.log(validParentheses("(]")) //false
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
