@@ -8,6 +8,7 @@
 | 1          | String | [Valid Palindrome](#given-a-string-s-return-true-if-it-is-a-palindrome-or-false-otherwise)                                                 | **Beginner** |
 | 2          | String | [Valid Anagram](#given-two-strings-s-and-t-return-true-if-t-is-an-anagram-of-s-and-false-otherwise)                                        | **Beginner** |
 | 3          | String | [Valid Parentheses](<#given-a-string-s-containing-just-the-characters-'('-')'-'{'-'}'-'['-and-']'-determine-if-the-input-string-is-valid>) | **Beginner** |
+| 4          | String | [Reverse String](#write-a-function-that-reverses-a-string-the-input-string-is-given-as-an-array-of-characters-s)                           | **Beginner** |
 
 1. ### Given a string s, return true if it is a palindrome, or false otherwise
 
@@ -90,6 +91,25 @@ function validParentheses(str) {
 console.log(validParentheses("()")) //true
 console.log(validParentheses("()[]{}")) //true
 console.log(validParentheses("(]")) //false
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+4.  ### Write a function that reverses a string. The input string is given as an array of characters s.
+
+```javascript
+function ReverseString(arr) {
+  let start = 0
+  let end = s.length - 1
+  while (start <= end) {
+    [s[start], s[end]] = [s[end], s[start]]
+    start++
+    end--
+  }
+  return s
+}
+
+console.log(ReverseString(["h", "e", "l", "l", "o"]))
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
