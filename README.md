@@ -115,7 +115,7 @@ console.log(ReverseString(["h", "e", "l", "l", "o"]))
 
 **[⬆ Back to Top](#table-of-contents)**
 
-4.  ### Write a function to find the longest common prefix string amongst an array of strings.
+5.  ### Write a function to find the longest common prefix string amongst an array of strings.
 
 ```javascript
 function longestCommonPrefix(arr) {
