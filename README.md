@@ -9,7 +9,8 @@
 | 2          | String | [Valid Anagram](#given-two-strings-s-and-t-return-true-if-t-is-an-anagram-of-s-and-false-otherwise)                                        | **Beginner** |
 | 3          | String | [Valid Parentheses](<#given-a-string-s-containing-just-the-characters-'('-')'-'{'-'}'-'['-and-']'-determine-if-the-input-string-is-valid>) | **Beginner** |
 | 4          | String | [Reverse String](#write-a-function-that-reverses-a-string-the-input-string-is-given-as-an-array-of-characters-s)                           | **Beginner** |
-| 5          | String | [Longest common prefix](#write-a-function-to-find-the-longest-common-prefix-string-amongst-an-array-of-strings)                                   | **Beginner** |
+| 5          | String | [Longest common prefix](#write-a-function-to-find-the-longest-common-prefix-string-amongst-an-array-of-strings)                            | **Beginner** |
+| 6          | String | [Add Strings](#given-two-non-negative-integers-num1-and-num2-represented-as-string-return-the-sum-of-num1-and-num2-as-a-string)            | **Beginner** |
 
 1. ### Given a string s, return true if it is a palindrome, or false otherwise
 
@@ -131,6 +132,38 @@ function longestCommonPrefix(arr) {
 }
 
 console.log(longestCommonPrefix(["string", "strings", "tring"]))
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+6.  ### Given two non-negative integers, num1 and num2 represented as string, return the sum of num1 and num2 as a string.
+
+```javascript
+function addStrings(num1, num2) {
+  num1 = num1.split("")
+  num2 = num2.split("")
+  let carry = "0"
+  let arr = []
+
+  while (num1.length || num2.length) {
+    let elm1 = num1.pop() ?? 0
+    let elm2 = num2.pop() ?? 0
+    let sum = String(+elm1 + +elm2 + +carry)
+    carry = "0"
+    if (sum >= 10) {
+      let [carry1, carry2] = sum.split("")
+      carry = carry1
+      sum = carry2
+    }
+    arr.unshift(sum)
+  }
+  if (+carry > 0) {
+    arr.unshift(carry)
+  }
+  return arr.join("")
+}
+
+console.log(addStrings("11", "123")) //134
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
