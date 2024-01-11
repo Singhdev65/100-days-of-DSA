@@ -46,6 +46,8 @@ function Palindrome(s) {
 
 **[⬆ Back to Top](#table-of-contents)**
 
+---
+
 2.  ### Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
 ```javascript
@@ -77,6 +79,8 @@ function Anagram(s, t) {
 
 **[⬆ Back to Top](#table-of-contents)**
 
+---
+
 3.  ### Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
 ```javascript
@@ -97,6 +101,8 @@ console.log(validParentheses("(]")) //false
 
 **[⬆ Back to Top](#table-of-contents)**
 
+---
+
 4.  ### Write a function that reverses a string. The input string is given as an array of characters s.
 
 ```javascript
@@ -115,6 +121,8 @@ console.log(ReverseString(["h", "e", "l", "l", "o"]))
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
+
+---
 
 5.  ### Write a function to find the longest common prefix string amongst an array of strings.
 
@@ -135,6 +143,8 @@ console.log(longestCommonPrefix(["string", "strings", "tring"]))
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
+
+---
 
 6.  ### Given two non-negative integers, num1 and num2 represented as string, return the sum of num1 and num2 as a string.
 
@@ -167,3 +177,5 @@ console.log(addStrings("11", "123")) //134
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
+
+---
