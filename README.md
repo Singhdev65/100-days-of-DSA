@@ -11,6 +11,7 @@
 | 4          | String | [Reverse String](#write-a-function-that-reverses-a-string-the-input-string-is-given-as-an-array-of-characters-s)                           | **Beginner** |
 | 5          | String | [Longest common prefix](#write-a-function-to-find-the-longest-common-prefix-string-amongst-an-array-of-strings)                            | **Beginner** |
 | 6          | String | [Add Strings](#given-two-non-negative-integers-num1-and-num2-represented-as-string-return-the-sum-of-num1-and-num2-as-a-string)            | **Beginner** |
+| 7          | String | [Isomorphic Strings](#given-two-strings-s-and-t,-determine-if-they-are-isomorphic)                                                         | **Beginner** |
 
 1. ### Given a string s, return true if it is a palindrome, or false otherwise
 
@@ -174,6 +175,46 @@ function addStrings(num1, num2) {
 }
 
 console.log(addStrings("11", "123")) //134
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+7.  ### Given two strings s and t, determine if they are isomorphic.
+
+```javascript
+function isIsomorphic(s, t) {
+  if (s.length !== t.length) return false
+
+  let objStoT = {}
+  let objTtoS = {}
+
+  for (let i = 0; i < s.length; i++) {
+    const charS = s[i]
+    const charT = t[i]
+
+    if (!objStoT[charS]) {
+      objStoT[charS] = charT
+    } else {
+      if (objStoT[charS] !== charT) {
+        return false
+      }
+    }
+
+    if (!objTtoS[charT]) {
+      objTtoS[charT] = charS
+    } else {
+      if (objTtoS[charT] !== charS) {
+        return false
+      }
+    }
+  }
+
+  return true
+}
+
+console.log(isIsomorphic("badc", "baba")) // false
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
