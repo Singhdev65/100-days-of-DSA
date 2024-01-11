@@ -3,7 +3,7 @@
 
 ### Table of Contents
 
-| Day Number | Topic  | Link                                                                                                                                       |   Difficulty |
+| Day | Topic  | Link                                                                                                                                       |   Difficulty |
 | ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------ | -----------: |
 | 1          | String | [Valid Palindrome](#given-a-string-s-return-true-if-it-is-a-palindrome-or-false-otherwise)                                                 | **Beginner** |
 | 2          | String | [Valid Anagram](#given-two-strings-s-and-t-return-true-if-t-is-an-anagram-of-s-and-false-otherwise)                                        | **Beginner** |
