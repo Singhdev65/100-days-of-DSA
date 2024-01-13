@@ -12,6 +12,7 @@ function secondFrequent(arr) {
   let secondMaxCount = 0
   let result = null
   for (const key in obj) {
+    
     if (maxCount < obj[key]) {
       secondMaxCount = maxCount
       maxCount = obj[key]
