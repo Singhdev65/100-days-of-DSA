@@ -3,15 +3,18 @@
 
 ### Table of Contents
 
-| Day | Topic  | Link                                                                                                                                       |   Difficulty |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------ | -----------: |
-| 1          | String | [Valid Palindrome](#given-a-string-s-return-true-if-it-is-a-palindrome-or-false-otherwise)                                                 | **Beginner** |
-| 2          | String | [Valid Anagram](#given-two-strings-s-and-t-return-true-if-t-is-an-anagram-of-s-and-false-otherwise)                                        | **Beginner** |
-| 3          | String | [Valid Parentheses](<#given-a-string-s-containing-just-the-characters-'('-')'-'{'-'}'-'['-and-']'-determine-if-the-input-string-is-valid>) | **Beginner** |
-| 4          | String | [Reverse String](#write-a-function-that-reverses-a-string-the-input-string-is-given-as-an-array-of-characters-s)                           | **Beginner** |
-| 5          | String | [Longest common prefix](#write-a-function-to-find-the-longest-common-prefix-string-amongst-an-array-of-strings)                            | **Beginner** |
-| 6          | String | [Add Strings](#given-two-non-negative-integers-num1-and-num2-represented-as-string-return-the-sum-of-num1-and-num2-as-a-string)            | **Beginner** |
-| 7          | String | [Isomorphic Strings](#given-two-strings-s-and-t,-determine-if-they-are-isomorphic)                                                         | **Beginner** |
+| Day | Topic  | Link                                                                                                                                                                           |   Difficulty |
+| --- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----------: |
+| 1   | String | [Valid Palindrome](#given-a-string-s-return-true-if-it-is-a-palindrome-or-false-otherwise)                                                                                     | **Beginner** |
+| 2   | String | [Valid Anagram](#given-two-strings-s-and-t-return-true-if-t-is-an-anagram-of-s-and-false-otherwise)                                                                            | **Beginner** |
+| 3   | String | [Valid Parentheses](<#given-a-string-s-containing-just-the-characters-'('-')'-'{'-'}'-'['-and-']'-determine-if-the-input-string-is-valid>)                                     | **Beginner** |
+| 4   | String | [Reverse String](#write-a-function-that-reverses-a-string-the-input-string-is-given-as-an-array-of-characters-s)                                                               | **Beginner** |
+| 5   | String | [Longest common prefix](#write-a-function-to-find-the-longest-common-prefix-string-amongst-an-array-of-strings)                                                                | **Beginner** |
+| 6   | String | [Add Strings](#given-two-non-negative-integers-num1-and-num2-represented-as-string-return-the-sum-of-num1-and-num2-as-a-string)                                                | **Beginner** |
+| 7   | String | [Isomorphic Strings](#given-two-strings-s-and-t,-determine-if-they-are-isomorphic)                                                                                             | **Beginner** |
+| 8   | String | [Duplicate character](#given-a-string-s-the-task-is-to-print-all-the-duplicate-characters-with-their-occurrences-in-the-given-string)                                          | **Beginner** |
+| 9   | String | [Second most frequent String](#given-a-sequence-of-strings,-the-task-is-to-find-out-the-second-most-frequent-string-in-the-given-sequence)                                     | **Beginner** |
+| 10  | String | [Haystack needle problem](#given-two-string-needle-and-haystack,-return-the-index-of-the-first-occurrence-of-needle-in-haystack-or--1-if-the-needle-is-not-a-part-of-haystack) | **Beginner** |
 
 1. ### Given a string s, return true if it is a palindrome, or false otherwise
 
@@ -215,6 +218,88 @@ function isIsomorphic(s, t) {
 }
 
 console.log(isIsomorphic("badc", "baba")) // false
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+8.  ### Given a string S, the task is to print all the duplicate characters with their occurrences in the given string.
+
+```javascript
+function duplicateString(s) {
+  let obj = {}
+  for (let char of s) {
+    if (obj[char]) {
+      obj[char]++
+    } else {
+      obj[char] = 1
+    }
+  }
+  for (let x in obj) {
+    if (obj[x] > 1) {
+      continue
+    } else {
+      delete obj[x]
+    }
+  }
+  return obj
+}
+
+console.log(duplicateString("geeksofgeeks")) //{g:2, e:4, k:2, s:2}
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+9.  ### Given a sequence of strings, the task is to find out the second most frequent string in the given sequence.
+
+```javascript
+function secondFrequent(arr) {
+  const obj = {}
+  arr.forEach(el => {
+    if (obj[el]) {
+      obj[el]++
+    } else {
+      obj[el] = 1
+    }
+  })
+
+  let maxCount = 0
+  let secondMaxCount = 0
+  let result = null
+  for (const key in obj) {
+    if (maxCount < obj[key]) {
+      secondMaxCount = maxCount
+      maxCount = obj[key]
+      result = key
+    } else if (secondMaxCount < obj[key] && obj[key] !== maxCount) {
+      secondMaxCount = obj[key]
+      result = key
+    }
+  }
+
+  return secondMaxCount > 0 ? result : ""
+}
+
+console.log(secondFrequent(["aaa", "bbb", "ccc", "bbb", "aaa", "aaa"])) // bbb
+console.log(secondFrequent(["geek", "for", "geek", "for", "geek", "aaa"])) //for
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+10. ### Given two string needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if the needle is not a part of haystack.
+
+```javascript
+function subString(haystack, needle) {
+  const index = haystack.indexOf(needle)
+  return index
+}
+
+console.log(subString("subArray", "Array")) // 3
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
