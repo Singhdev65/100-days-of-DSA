@@ -3,18 +3,20 @@
 
 ### Table of Contents
 
-| Day | Topic  | Link                                                                                                                                                                           |   Difficulty |
-| --- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----------: |
-| 1   | String | [Valid Palindrome](#given-a-string-s-return-true-if-it-is-a-palindrome-or-false-otherwise)                                                                                     | **Beginner** |
-| 2   | String | [Valid Anagram](#given-two-strings-s-and-t-return-true-if-t-is-an-anagram-of-s-and-false-otherwise)                                                                            | **Beginner** |
-| 3   | String | [Valid Parentheses](<#given-a-string-s-containing-just-the-characters-'('-')'-'{'-'}'-'['-and-']'-determine-if-the-input-string-is-valid>)                                     | **Beginner** |
-| 4   | String | [Reverse String](#write-a-function-that-reverses-a-string-the-input-string-is-given-as-an-array-of-characters-s)                                                               | **Beginner** |
-| 5   | String | [Longest common prefix](#write-a-function-to-find-the-longest-common-prefix-string-amongst-an-array-of-strings)                                                                | **Beginner** |
-| 6   | String | [Add Strings](#given-two-non-negative-integers-num1-and-num2-represented-as-string-return-the-sum-of-num1-and-num2-as-a-string)                                                | **Beginner** |
-| 7   | String | [Isomorphic Strings](#given-two-strings-s-and-t,-determine-if-they-are-isomorphic)                                                                                             | **Beginner** |
-| 8   | String | [Duplicate character](#given-a-string-s-the-task-is-to-print-all-the-duplicate-characters-with-their-occurrences-in-the-given-string)                                          | **Beginner** |
-| 9   | String | [Second most frequent String](#given-a-sequence-of-strings,-the-task-is-to-find-out-the-second-most-frequent-string-in-the-given-sequence)                                     | **Beginner** |
-| 10  | String | [Haystack needle problem](#given-two-string-needle-and-haystack,-return-the-index-of-the-first-occurrence-of-needle-in-haystack-or--1-if-the-needle-is-not-a-part-of-haystack) | **Beginner** |
+| Day | Topic  | Link                                                                                                                                                                                                                                                                                                        |   Difficulty |
+| --- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------: |
+| 1   | String | [Valid Palindrome](#given-a-string-s-return-true-if-it-is-a-palindrome-or-false-otherwise)                                                                                                                                                                                                                  | **Beginner** |
+| 2   | String | [Valid Anagram](#given-two-strings-s-and-t-return-true-if-t-is-an-anagram-of-s-and-false-otherwise)                                                                                                                                                                                                         | **Beginner** |
+| 3   | String | [Valid Parentheses](<#given-a-string-s-containing-just-the-characters-'('-')'-'{'-'}'-'['-and-']'-determine-if-the-input-string-is-valid>)                                                                                                                                                                  | **Beginner** |
+| 4   | String | [Reverse String](#write-a-function-that-reverses-a-string-the-input-string-is-given-as-an-array-of-characters-s)                                                                                                                                                                                            | **Beginner** |
+| 5   | String | [Longest common prefix](#write-a-function-to-find-the-longest-common-prefix-string-amongst-an-array-of-strings)                                                                                                                                                                                             | **Beginner** |
+| 6   | String | [Add Strings](#given-two-non-negative-integers-num1-and-num2-represented-as-string-return-the-sum-of-num1-and-num2-as-a-string)                                                                                                                                                                             | **Beginner** |
+| 7   | String | [Isomorphic Strings](#given-two-strings-s-and-t,-determine-if-they-are-isomorphic)                                                                                                                                                                                                                          | **Beginner** |
+| 8   | String | [Duplicate character](#given-a-string-s-the-task-is-to-print-all-the-duplicate-characters-with-their-occurrences-in-the-given-string)                                                                                                                                                                       | **Beginner** |
+| 9   | String | [Second most frequent String](#given-a-sequence-of-strings,-the-task-is-to-find-out-the-second-most-frequent-string-in-the-given-sequence)                                                                                                                                                                  | **Beginner** |
+| 10  | String | [Haystack needle problem](#given-two-string-needle-and-haystack,-return-the-index-of-the-first-occurrence-of-needle-in-haystack-or--1-if-the-needle-is-not-a-part-of-haystack)                                                                                                                              | **Beginner** |
+| 11  | String | [Minimum operation to Transform](#given-two-strings-A-and-B-the-task-is-to-convert-A-to-B-if-possible-the-only-operation-allowed-is-to-put-any-character-from-A-and-insert-it-at-front-find-if-it’s-possible-to-convert-the-string-if-yes-then-output-minimum-no-of-operations-required-for-transformation) | **Beginner** |
+| 12  | String | [First Repeating character](#given-a-string-return-the-first-recurring-character-in-it-or-null-if-there-is-no-recurring-character)                                                                                                                                                                          | **Beginner** |
 
 1. ### Given a string s, return true if it is a palindrome, or false otherwise
 
@@ -300,6 +302,82 @@ function subString(haystack, needle) {
 }
 
 console.log(subString("subArray", "Array")) // 3
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+11. ### Given two strings A and B, the task is to convert A to B if possible. The only operation allowed is to put any character from A and insert it at front. Find if it’s possible to convert the string. If yes, then output minimum no. of operations required for transformation.
+
+```javascript
+function minOperationsToConvert(A, B) {
+  if (A.length !== B.length) {
+    return -1
+  }
+
+  const n = A.length
+
+  let m = {}
+  for (let char of A) {
+    if (m[char]) {
+      m[char]++
+    } else {
+      m[char] = 1
+    }
+  }
+
+  for (let i = 0; i < n; i++) {
+    if (m[B[i]]) {
+      m[B[i]]--
+    }
+  }
+
+  for (const char in m) {
+    if (m[char] !== 0) {
+      return -1
+    }
+  }
+
+  let i = n - 1,
+    j = n - 1
+  let res = 0
+  while (i >= 0 && j >= 0) {
+    while (i >= 0 && A[i] !== B[j]) {
+      res++
+      i--
+    }
+    i--
+    j--
+  }
+  return res
+}
+
+console.log(minOperationsToConvert("ABD", "BAD")) // Output: 1
+console.log(minOperationsToConvert("EACBD", "EABCD")) // Output: 3
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+12. ### Given a string, return the first recurring character in it, or null if there is no recurring character.
+
+```javascript
+function firstRepeatingCharacter(str) {
+  const obj = {}
+  for (let char of str) {
+    if (obj[char]) {
+      return char
+    } else {
+      obj[char] = 1
+    }
+  }
+  return null
+}
+
+console.log(firstRepeatingCharacter("acbbac")) //b
+console.log(firstRepeatingCharacter("abcdef")) // null
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
