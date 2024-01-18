@@ -17,6 +17,8 @@
 | 10  | String | [Haystack needle problem](#given-two-string-needle-and-haystack,-return-the-index-of-the-first-occurrence-of-needle-in-haystack-or--1-if-the-needle-is-not-a-part-of-haystack)                                                                                                                              | **Beginner** |
 | 11  | String | [Minimum operation to Transform](#given-two-strings-A-and-B-the-task-is-to-convert-A-to-B-if-possible-the-only-operation-allowed-is-to-put-any-character-from-A-and-insert-it-at-front-find-if-it’s-possible-to-convert-the-string-if-yes-then-output-minimum-no-of-operations-required-for-transformation) | **Beginner** |
 | 12  | String | [First Repeating character](#given-a-string-return-the-first-recurring-character-in-it-or-null-if-there-is-no-recurring-character)                                                                                                                                                                          | **Beginner** |
+| 13  | String | [Minimum number of Flips](#minimum-number-of-flips-to-make-the-binary-string-alternating)                                                                                                                                                                                                                   | **Beginner** |
+| 14  | String | [Consecutive Characters](#given-a-string-s,-return-the-power-of-s)                                                                                                                                                                                                                                          | **Beginner** |
 
 1. ### Given a string s, return true if it is a palindrome, or false otherwise
 
@@ -378,6 +380,58 @@ function firstRepeatingCharacter(str) {
 
 console.log(firstRepeatingCharacter("acbbac")) //b
 console.log(firstRepeatingCharacter("abcdef")) // null
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+13. ### Minimum Number of Flips to Make the Binary String Alternating.
+
+```javascript
+function minOperation(s) {
+  const lengthOfString = s.length
+  const alternatingPattern = "01"
+  let flipCount = 0
+  for (let index = 0; index < lengthOfString; ++index) {
+    if (s[index] !== alternatingPattern[index % 2]) {
+      ++flipCount
+    }
+  }
+
+  let minimumFlips = Math.min(flipCount, lengthOfString - flipCount)
+
+  for (let index = 0; index < lengthOfString; ++index) {
+    if (s[index] !== alternatingPattern[index % 2]) {
+      --flipCount
+    }
+
+    if (s[index] !== alternatingPattern[(index + lengthOfString) % 2]) {
+      ++flipCount
+    }
+
+    minimumFlips = Math.min(minimumFlips, flipCount, lengthOfString - flipCount)
+  }
+
+  return minimumFlips
+}
+
+console.log(minOperation("10100101011001111110")) // 10 // 10101010101010101010
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+14. ### Given a string s, return the power of s.
+
+```javascript
+function consecutiveCharacters(s){
+
+}
+
+console.log(consecutiveCharacters("abbcccddddeeeeedcba")); //5
+console.log(consecutiveCharacters("leetcode")); // 2
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
