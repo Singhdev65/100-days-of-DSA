@@ -426,12 +426,25 @@ console.log(minOperation("10100101011001111110")) // 10 // 10101010101010101010
 14. ### Given a string s, return the power of s.
 
 ```javascript
-function consecutiveCharacters(s){
+function consecutiveCharacters(s) {
+  let maxPower = 1
+  let currentPower = 1
 
+  for (let i = 1; i < s.length; i++) {
+    if (s[i] === s[i - 1]) {
+      currentPower++
+    } else {
+      currentPower = 1
+    }
+
+    maxPower = Math.max(maxPower, currentPower)
+  }
+  return maxPower
 }
 
-console.log(consecutiveCharacters("abbcccddddeeeeedcba")); //5
-console.log(consecutiveCharacters("leetcode")); // 2
+console.log(consecutiveCharacters("abbcccddddeeeeedcba")) //5
+console.log(consecutiveCharacters("leetcode")) // 2
+
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
