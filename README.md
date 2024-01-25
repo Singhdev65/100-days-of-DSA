@@ -19,19 +19,12 @@
 | 12           | String | [First Repeating character](#given-a-string-return-the-first-recurring-character-in-it-or-null-if-there-is-no-recurring-character)                                                                                                                                                                          | **Beginner** |
 | 13           | String | [Minimum number of Flips](#minimum-number-of-flips-to-make-the-binary-string-alternating)                                                                                                                                                                                                                   | **Beginner** |
 | 14           | String | [Consecutive Characters](#given-a-string-s,-return-the-power-of-s)                                                                                                                                                                                                                                          | **Beginner** |
-| **Beginner** |
 | 15           | Array  | [Two Sum](#given-an-array-of-integers-arr-and-an-integer-target-return-indices-of-the-two-numbers-such-that-they-add-up-to-target)                                                                                                                                                                          | **Beginner** |
-| **Beginner** |
 | 16           | Array  | [Remove Duplicates](#given-an-integer-array-nums-sorted-in-non-decreasing-order-remove-the-duplicates-in-place-such-that-each-unique-element-appears-only-once-the-relative-order-of-the-elements-should-be-kept-the-same-then-return-the-number-of-unique-elements-in-nums)                                                                                                                                                                                                                                               | **Beginner** |
-| **Beginner** |
 | 17           | Array  | [Most frequent element in Array](#given-an-array-nums-of-size-n-return-the-majority-element)                                                                                                                                                                                                                                  | **Beginner** |
-| **Beginner** |
 | 18           | Array  | [Running sum of an array](#given-an-array-nums.-we-define-a-running-sum-of-an-array-as-runningsum[i]-=-sum(nums[0]…nums[i]))                                                                                                                                                                                                                                        | **Beginner** |
-| **Beginner** |
 | 19           | Array  | [Duplicates in Array](#given-an-array-of-integers-nums-containing-n-+-1-integers-where-each-integer-is-in-the-range-[1,-n]-inclusive-there-is-only-one-repeated-number-in-nums-return-this-repeated-number)                                                                                                 | **Beginner** |
-| **Beginner** |
 | 20           | Array  | [Sort Array](#given-an-array-nums-with-n-objects-colored-red-white-or-blue-sort-them-in-place-so-that-objects-of-the-same-color-are-adjacent-with-the-colors-in-the-order-red-white-and-blue-we-will-use-the-integers-0-1-and-2-to-represent-the-color-red-white-and-blue-respectively)                     | **Beginner** |
-| **Beginner** |
 | 21           | Array  | [Reverse Array](#given-an-array-the-task-is-to-reverse-the-array)                                                                                                                                                                                                                                           | **Beginner** |
 
 1. ### Given a string s, return true if it is a palindrome, or false otherwise
