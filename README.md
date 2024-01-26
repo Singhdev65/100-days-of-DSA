@@ -26,7 +26,7 @@
 | 19  | Array  | [Duplicates in Array](#given-an-array-of-integers-nums-containing-n-+-1-integers-where-each-integer-is-in-the-range-[1,-n]-inclusive-there-is-only-one-repeated-number-in-nums-return-this-repeated-number)                                                                                                 | **Beginner** |
 | 20  | Array  | [Sort Array](#given-an-array-nums-with-n-objects-colored-red-white-or-blue-sort-them-in-place-so-that-objects-of-the-same-color-are-adjacent-with-the-colors-in-the-order-red-white-and-blue-we-will-use-the-integers-0-1-and-2-to-represent-the-color-red-white-and-blue-respectively)                     | **Beginner** |
 | 21  | Array  | [Reverse Array](#given-an-array-the-task-is-to-reverse-the-array)                                                                                                                                                                                                                                           | **Beginner** |
-| 22  | Array  | [Remove Duplicate](#given-an-array-return-true-if-any-value-appears-at-least-twice-in-the-array-and-return-false-if-every-element-is-distinct)                                                                                                                                                              | **Beginner** |
+| 22  | Array  | [Check Duplicates in Array](#given-an-array-return-true-if-any-value-appears-at-least-twice-in-the-array-and-return-false-if-every-element-is-distinct)                                                                                                                                                              | **Beginner** |
 
 1. ### Given a string s, return true if it is a palindrome, or false otherwise
 
