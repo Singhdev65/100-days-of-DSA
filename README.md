@@ -3,29 +3,30 @@
 
 ### Table of Contents
 
-| Day          | Topic  | Link                                                                                                                                                                                                                                                                                                        |   Difficulty |
-| ------------ | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------: |
-| 1            | String | [Valid Palindrome](#given-a-string-s-return-true-if-it-is-a-palindrome-or-false-otherwise)                                                                                                                                                                                                                  | **Beginner** |
-| 2            | String | [Valid Anagram](#given-two-strings-s-and-t-return-true-if-t-is-an-anagram-of-s-and-false-otherwise)                                                                                                                                                                                                         | **Beginner** |
-| 3            | String | [Valid Parentheses](<#given-a-string-s-containing-just-the-characters-'('-')'-'{'-'}'-'['-and-']'-determine-if-the-input-string-is-valid>)                                                                                                                                                                  | **Beginner** |
-| 4            | String | [Reverse String](#write-a-function-that-reverses-a-string-the-input-string-is-given-as-an-array-of-characters-s)                                                                                                                                                                                            | **Beginner** |
-| 5            | String | [Longest common prefix](#write-a-function-to-find-the-longest-common-prefix-string-amongst-an-array-of-strings)                                                                                                                                                                                             | **Beginner** |
-| 6            | String | [Add Strings](#given-two-non-negative-integers-num1-and-num2-represented-as-string-return-the-sum-of-num1-and-num2-as-a-string)                                                                                                                                                                             | **Beginner** |
-| 7            | String | [Isomorphic Strings](#given-two-strings-s-and-t,-determine-if-they-are-isomorphic)                                                                                                                                                                                                                          | **Beginner** |
-| 8            | String | [Duplicate character](#given-a-string-s-the-task-is-to-print-all-the-duplicate-characters-with-their-occurrences-in-the-given-string)                                                                                                                                                                       | **Beginner** |
-| 9            | String | [Second most frequent String](#given-a-sequence-of-strings,-the-task-is-to-find-out-the-second-most-frequent-string-in-the-given-sequence)                                                                                                                                                                  | **Beginner** |
-| 10           | String | [Haystack needle problem](#given-two-string-needle-and-haystack,-return-the-index-of-the-first-occurrence-of-needle-in-haystack-or--1-if-the-needle-is-not-a-part-of-haystack)                                                                                                                              | **Beginner** |
-| 11           | String | [Minimum operation to Transform](#given-two-strings-A-and-B-the-task-is-to-convert-A-to-B-if-possible-the-only-operation-allowed-is-to-put-any-character-from-A-and-insert-it-at-front-find-if-it’s-possible-to-convert-the-string-if-yes-then-output-minimum-no-of-operations-required-for-transformation) | **Beginner** |
-| 12           | String | [First Repeating character](#given-a-string-return-the-first-recurring-character-in-it-or-null-if-there-is-no-recurring-character)                                                                                                                                                                          | **Beginner** |
-| 13           | String | [Minimum number of Flips](#minimum-number-of-flips-to-make-the-binary-string-alternating)                                                                                                                                                                                                                   | **Beginner** |
-| 14           | String | [Consecutive Characters](#given-a-string-s,-return-the-power-of-s)                                                                                                                                                                                                                                          | **Beginner** |
-| 15           | Array  | [Two Sum](#given-an-array-of-integers-arr-and-an-integer-target-return-indices-of-the-two-numbers-such-that-they-add-up-to-target)                                                                                                                                                                          | **Beginner** |
-| 16           | Array  | [Remove Duplicates](#given-an-integer-array-nums-sorted-in-non-decreasing-order-remove-the-duplicates-in-place-such-that-each-unique-element-appears-only-once-the-relative-order-of-the-elements-should-be-kept-the-same-then-return-the-number-of-unique-elements-in-nums)                                                                                                                                                                                                                                               | **Beginner** |
-| 17           | Array  | [Most frequent element in Array](#given-an-array-nums-of-size-n-return-the-majority-element)                                                                                                                                                                                                                                  | **Beginner** |
-| 18           | Array  | [Running sum of an array](#given-an-array-nums.-we-define-a-running-sum-of-an-array-as-runningsum[i]-=-sum(nums[0]…nums[i]))                                                                                                                                                                                                                                        | **Beginner** |
-| 19           | Array  | [Duplicates in Array](#given-an-array-of-integers-nums-containing-n-+-1-integers-where-each-integer-is-in-the-range-[1,-n]-inclusive-there-is-only-one-repeated-number-in-nums-return-this-repeated-number)                                                                                                 | **Beginner** |
-| 20           | Array  | [Sort Array](#given-an-array-nums-with-n-objects-colored-red-white-or-blue-sort-them-in-place-so-that-objects-of-the-same-color-are-adjacent-with-the-colors-in-the-order-red-white-and-blue-we-will-use-the-integers-0-1-and-2-to-represent-the-color-red-white-and-blue-respectively)                     | **Beginner** |
-| 21           | Array  | [Reverse Array](#given-an-array-the-task-is-to-reverse-the-array)                                                                                                                                                                                                                                           | **Beginner** |
+| Day | Topic  | Link                                                                                                                                                                                                                                                                                                        |   Difficulty |
+| --- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------: |
+| 1   | String | [Valid Palindrome](#given-a-string-s-return-true-if-it-is-a-palindrome-or-false-otherwise)                                                                                                                                                                                                                  | **Beginner** |
+| 2   | String | [Valid Anagram](#given-two-strings-s-and-t-return-true-if-t-is-an-anagram-of-s-and-false-otherwise)                                                                                                                                                                                                         | **Beginner** |
+| 3   | String | [Valid Parentheses](<#given-a-string-s-containing-just-the-characters-'('-')'-'{'-'}'-'['-and-']'-determine-if-the-input-string-is-valid>)                                                                                                                                                                  | **Beginner** |
+| 4   | String | [Reverse String](#write-a-function-that-reverses-a-string-the-input-string-is-given-as-an-array-of-characters-s)                                                                                                                                                                                            | **Beginner** |
+| 5   | String | [Longest common prefix](#write-a-function-to-find-the-longest-common-prefix-string-amongst-an-array-of-strings)                                                                                                                                                                                             | **Beginner** |
+| 6   | String | [Add Strings](#given-two-non-negative-integers-num1-and-num2-represented-as-string-return-the-sum-of-num1-and-num2-as-a-string)                                                                                                                                                                             | **Beginner** |
+| 7   | String | [Isomorphic Strings](#given-two-strings-s-and-t,-determine-if-they-are-isomorphic)                                                                                                                                                                                                                          | **Beginner** |
+| 8   | String | [Duplicate character](#given-a-string-s-the-task-is-to-print-all-the-duplicate-characters-with-their-occurrences-in-the-given-string)                                                                                                                                                                       | **Beginner** |
+| 9   | String | [Second most frequent String](#given-a-sequence-of-strings,-the-task-is-to-find-out-the-second-most-frequent-string-in-the-given-sequence)                                                                                                                                                                  | **Beginner** |
+| 10  | String | [Haystack needle problem](#given-two-string-needle-and-haystack,-return-the-index-of-the-first-occurrence-of-needle-in-haystack-or--1-if-the-needle-is-not-a-part-of-haystack)                                                                                                                              | **Beginner** |
+| 11  | String | [Minimum operation to Transform](#given-two-strings-A-and-B-the-task-is-to-convert-A-to-B-if-possible-the-only-operation-allowed-is-to-put-any-character-from-A-and-insert-it-at-front-find-if-it’s-possible-to-convert-the-string-if-yes-then-output-minimum-no-of-operations-required-for-transformation) | **Beginner** |
+| 12  | String | [First Repeating character](#given-a-string-return-the-first-recurring-character-in-it-or-null-if-there-is-no-recurring-character)                                                                                                                                                                          | **Beginner** |
+| 13  | String | [Minimum number of Flips](#minimum-number-of-flips-to-make-the-binary-string-alternating)                                                                                                                                                                                                                   | **Beginner** |
+| 14  | String | [Consecutive Characters](#given-a-string-s,-return-the-power-of-s)                                                                                                                                                                                                                                          | **Beginner** |
+| 15  | Array  | [Two Sum](#given-an-array-of-integers-arr-and-an-integer-target-return-indices-of-the-two-numbers-such-that-they-add-up-to-target)                                                                                                                                                                          | **Beginner** |
+| 16  | Array  | [Remove Duplicates](#given-an-integer-array-nums-sorted-in-non-decreasing-order-remove-the-duplicates-in-place-such-that-each-unique-element-appears-only-once-the-relative-order-of-the-elements-should-be-kept-the-same-then-return-the-number-of-unique-elements-in-nums)                                | **Beginner** |
+| 17  | Array  | [Most frequent element in Array](#given-an-array-nums-of-size-n-return-the-majority-element)                                                                                                                                                                                                                | **Beginner** |
+| 18  | Array  | [Running sum of an array](<#given-an-array-nums.-we-define-a-running-sum-of-an-array-as-runningsum[i]-=-sum(nums[0]…nums[i])>)                                                                                                                                                                              | **Beginner** |
+| 19  | Array  | [Duplicates in Array](#given-an-array-of-integers-nums-containing-n-+-1-integers-where-each-integer-is-in-the-range-[1,-n]-inclusive-there-is-only-one-repeated-number-in-nums-return-this-repeated-number)                                                                                                 | **Beginner** |
+| 20  | Array  | [Sort Array](#given-an-array-nums-with-n-objects-colored-red-white-or-blue-sort-them-in-place-so-that-objects-of-the-same-color-are-adjacent-with-the-colors-in-the-order-red-white-and-blue-we-will-use-the-integers-0-1-and-2-to-represent-the-color-red-white-and-blue-respectively)                     | **Beginner** |
+| 21  | Array  | [Reverse Array](#given-an-array-the-task-is-to-reverse-the-array)                                                                                                                                                                                                                                           | **Beginner** |
+| 22  | Array  | [Remove Duplicate](#given-an-array-return-true-if-any-value-appears-at-least-twice-in-the-array-and-return-false-if-every-element-is-distinct)                                                                                                                                                              | **Beginner** |
 
 1. ### Given a string s, return true if it is a palindrome, or false otherwise
 
@@ -616,6 +617,38 @@ function reverse(arr) {
 }
 
 console.log(reverse([1, 2, 3, 4, 5])) //[5,4,3,2,1]
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+22. ### Given an array return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+```javascript
+function distinct(arr) {
+  const obj = {}
+
+  arr.forEach(element => {
+    if (obj[element]) {
+      obj[element]++
+    } else {
+      obj[element] = 1
+    }
+  })
+
+  for (let char in obj) {
+    if (obj[char] > 1) {
+      return true
+    }
+  }
+
+  return false
+}
+
+console.log(distinct([1, 2, 3, 1])) //true
+console.log(distinct([1, 2, 3, 4])) // false
+console.log(distinct([1, 1, 1, 3, 3, 4, 3, 2, 4, 2])) // true
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
