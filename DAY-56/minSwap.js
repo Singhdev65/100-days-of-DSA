@@ -1,16 +1,19 @@
 function minSwap(s) {
     let swap = 0;
     let openCount = 0;
+    let closeCount = 0;
+    let disbalancedCount = 0;
 
     for (let char of s) {
         if (char === "[") {
             openCount++
-        } else if (char === "]") {
-            if (openCount > 0) {
-                openCount--
-            } else {
-                swap++
+            if (disbalancedCount > 0) {
+                swap += disbalancedCount
+                disbalancedCount--
             }
+        } else if (char === "]") {
+            closeCount++;
+            disbalancedCount = closeCount - openCount 
         }
     }
     return swap
