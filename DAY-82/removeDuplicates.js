@@ -46,8 +46,6 @@ nums is sorted in non-decreasing order.
 
 */
 
-
-
 function removeDuplicates(nums) {
     let count = 1;
     let duplicateCount = 1;
