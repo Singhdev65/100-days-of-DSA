@@ -1,6 +1,7 @@
-function ReverseSequence(str) {
-  const reversedStr = str.split(" ").reverse().join(" ");
-  return reversedStr;
+function ReverseSequence(s) {
+    const trimedStr = s.trim();
+    const reversedStr = trimedStr.split(/\s+/).reverse().join(" ");
+    return reversedStr;
 }
 
 console.log(ReverseSequence("the sky is blue")); //"blue is sky the"
