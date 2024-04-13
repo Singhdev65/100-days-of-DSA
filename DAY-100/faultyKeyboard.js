@@ -1,19 +1,13 @@
 function faultyKeyboard(s) {
-  let result = "";
-  let currentString = "";
-
-  for (let i = 0; i < s.length; i++) {
-    if (s[i] === "i") {
-      result += currentString.split("").reverse().join("");
-      currentString = "";
+  let arr = [];
+  for (let char of s) {
+    if (char === "i") {
+      arr.reverse();
     } else {
-      currentString += s[i];
+      arr.push(char);
     }
   }
-
-  result += currentString.split("").reverse().join("");
-
-  return result;
+  return arr.join("");
 }
 
 console.log(faultyKeyboard("string")); // "rtsng"
