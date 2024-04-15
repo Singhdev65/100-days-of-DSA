@@ -1,7 +1,7 @@
 <h1 align="center">100 days of DSA</h1>
 <h2 align="center">DSA is Fun! Do it everyday 💯💯</h2>
 
-1. **[Solve](https://leetcode.com/problems/valid-palindrome/) ?**
+1. **[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) ?**
 
 ```javascript
 function Palindrome(s) {
