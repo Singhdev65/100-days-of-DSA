@@ -1,6 +1,8 @@
 <h1 align="center">100 days of DSA</h1>
 <h2 align="center">DSA is Fun! Do it everyday 💯💯</h2>
 
+###start-solving-you-will-fall-in-❤️❤️
+
 1. **[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) ?**
 
 ```javascript
@@ -33,6 +35,39 @@ function Palindrome(s) {
 }
 ```
 
-**[⬆ Back to Top](#table-of-contents)**
+2. **[Valid Anagram](https://leetcode.com/problems/valid-anagram/) ?**
+
+```javascript
+function Anagram(s, t) {
+  if (s.length !== t.length) {
+    return false;
+  }
+
+  const charCount = {};
+
+  for (let char of s) {
+    if (charCount[char]) {
+      charCount[char] += 1;
+    } else {
+      charCount[char] = 1;
+    }
+  }
+
+  for (let char of t) {
+    if (!charCount[char]) {
+      return false;
+    }
+    charCount[char]--;
+  }
+
+  return true;
+}
+
+console.log(Anagram("anagram", "nagaram")); //true
+console.log(Anagram("rat", "car")); // false
+console.log(Anagram("aacc", "ccac")); //false
+```
+
+**[⬆ Back to Top](#start-solving-you-will-fall-in-❤️❤️)**
 
 ---
