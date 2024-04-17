@@ -68,6 +68,39 @@ console.log(Anagram("rat", "car")); // false
 console.log(Anagram("aacc", "ccac")); //false
 ```
 
+3. **[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) ?**
+
+```javascript
+function validParentheses(str) {
+  let length;
+
+  do {
+    length = str.length;
+    str = str.replace("()", "").replace("{}", "").replace("[]", "");
+  } while (length !== str.length);
+  return str.length === 0;
+}
+
+console.log(validParentheses("()")); //true
+console.log(validParentheses("()[]{}")); //true
+console.log(validParentheses("(]")); //false
+```
+
+```javascript
+function validParentheses(s) {
+  let obj = { "(": ")", "{": "}", "[": "]" };
+  let arr = [];
+  for (let char of s) {
+    if (obj[char]) arr.push(char);
+    else if (obj[arr.pop()] !== char) return false;
+  }
+  return arr.length == 0;
+}
+console.log(validParentheses("()")); //true
+console.log(validParentheses("()[]{}")); //true
+console.log(validParentheses("(]")); //false
+```
+
 **[⬆ Back to Top](#start-solving-you-will-fall-in-❤️❤️)**
 
 ---
