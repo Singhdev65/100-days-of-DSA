@@ -261,6 +261,17 @@ console.log(secondFrequent(["aaa", "bbb", "ccc", "bbb", "aaa", "aaa"])); // bbb
 console.log(secondFrequent(["geek", "for", "geek", "for", "geek", "aaa"])); //for
 ```
 
+10. **[Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) ?**
+
+```javascript
+function subString(haystack, needle) {
+  const index = haystack.indexOf(needle);
+  return index;
+}
+
+console.log(subString("subArray", "Array")); // 3
+```
+
 **[⬆ Back to Top](#start-solving-you-will-fall-in-❤️❤️)**
 
 ---
