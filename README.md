@@ -321,7 +321,7 @@ console.log(minOperationsToConvert("ABD", "BAD")); // Output: 1
 console.log(minOperationsToConvert("EACBD", "EABCD")); // Output: 3
 ```
 
-12.  **[First Repeating character in String](https://www.geeksforgeeks.org/find-the-first-repeated-character-in-a-string/) ?**
+12. **[First Repeating character in String](https://www.geeksforgeeks.org/find-the-first-repeated-character-in-a-string/) ?**
 
 ```javascript
 function firstRepeatingCharacter(str) {
@@ -338,6 +338,43 @@ function firstRepeatingCharacter(str) {
 
 console.log(firstRepeatingCharacter("acbbac"));
 console.log(firstRepeatingCharacter("abcdef"));
+```
+
+13. **[Minimum Number of Flips to Make the Binary String Alternating](https://leetcode.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/) ?**
+
+```javascript
+function minOperation(s) {
+  const lengthOfString = s.length;
+  const alternatingPattern = "01";
+  let flipCount = 0;
+  for (let index = 0; index < lengthOfString; ++index) {
+    if (s[index] !== alternatingPattern[index % 2]) {
+      ++flipCount;
+    }
+  }
+
+  let minimumFlips = Math.min(flipCount, lengthOfString - flipCount);
+
+  for (let index = 0; index < lengthOfString; ++index) {
+    if (s[index] !== alternatingPattern[index % 2]) {
+      --flipCount;
+    }
+
+    if (s[index] !== alternatingPattern[(index + lengthOfString) % 2]) {
+      ++flipCount;
+    }
+
+    minimumFlips = Math.min(
+      minimumFlips,
+      flipCount,
+      lengthOfString - flipCount
+    );
+  }
+
+  return minimumFlips;
+}
+
+console.log(minOperation("10100101011001111110")); // 10 // 10101010101010101010
 ```
 
 **[⬆ Back to Top](#start-solving-you-will-fall-in-❤️❤️)**
