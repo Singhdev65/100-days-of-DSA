@@ -377,6 +377,48 @@ function minOperation(s) {
 console.log(minOperation("10100101011001111110")); // 10 // 10101010101010101010
 ```
 
+14.  **[Consecutive Characters](https://leetcode.com/problems/consecutive-characters/) ?**
+
+```javascript
+function consecutiveCharacters(s) {
+  let maxPower = 1;
+  let currentPower = 1;
+
+  for (let i = 1; i < s.length; i++) {
+    if (s[i] === s[i - 1]) {
+      currentPower++;
+    } else {
+      currentPower = 1;
+    }
+
+    maxPower = Math.max(maxPower, currentPower);
+  }
+  return maxPower;
+}
+
+console.log(consecutiveCharacters("abbcccddddeeeeedcba")); //5
+console.log(consecutiveCharacters("leetcode")); // 2
+```
+
+15.  **[Two Sum](https://leetcode.com/problems/two-sum/) ?**
+
+```javascript
+function twoSum(arr, target) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = i + 1; j < arr.length - 1; j++) {
+      if (arr[i] + arr[j] === target) {
+        return [i, j];
+      }
+    }
+  }
+  return null;
+}
+
+console.log(twoSum([2, 7, 11, 15], 9)); // [0,1]
+console.log(twoSum([3, 2, 4], 6)); // [1,2]
+console.log(twoSum([3, 3], 6)); // [0,1]
+```
+
 **[⬆ Back to Top](#start-solving-you-will-fall-in-❤️❤️)**
 
 ---
