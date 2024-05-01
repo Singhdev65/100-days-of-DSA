@@ -377,7 +377,7 @@ function minOperation(s) {
 console.log(minOperation("10100101011001111110")); // 10 // 10101010101010101010
 ```
 
-14.  **[Consecutive Characters](https://leetcode.com/problems/consecutive-characters/) ?**
+14. **[Consecutive Characters](https://leetcode.com/problems/consecutive-characters/) ?**
 
 ```javascript
 function consecutiveCharacters(s) {
@@ -400,7 +400,7 @@ console.log(consecutiveCharacters("abbcccddddeeeeedcba")); //5
 console.log(consecutiveCharacters("leetcode")); // 2
 ```
 
-15.  **[Two Sum](https://leetcode.com/problems/two-sum/) ?**
+15. **[Two Sum](https://leetcode.com/problems/two-sum/) ?**
 
 ```javascript
 function twoSum(arr, target) {
@@ -417,6 +417,66 @@ function twoSum(arr, target) {
 console.log(twoSum([2, 7, 11, 15], 9)); // [0,1]
 console.log(twoSum([3, 2, 4], 6)); // [1,2]
 console.log(twoSum([3, 3], 6)); // [0,1]
+```
+
+16. **[Remove Duplicates](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/) ?**
+
+```javascript
+function removeDuplicate(arr) {
+  if (arr.length === 0) {
+    return 0;
+  }
+
+  let uniqueCount = 1;
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] !== arr[i - 1]) {
+      arr[uniqueCount] = arr[i];
+      uniqueCount++;
+    }
+  }
+
+  return uniqueCount;
+}
+
+console.log(removeDuplicate([1, 1, 2])); //[1,2]
+```
+
+17. **[Most Frequent Element in a String](https://www.geeksforgeeks.org/problems/second-most-repeated-string-in-a-sequence0534/1) ?**
+
+```javascript
+function mostFrequentElem(nums) {
+  const obj = {};
+  nums.forEach((item) => {
+    if (obj[item]) {
+      obj[item]++;
+    } else {
+      obj[item] = 1;
+    }
+  });
+
+  return Object.keys(obj).reduce((a, b) => (obj[a] > obj[b] ? a : b));
+}
+
+console.log(mostFrequentElem([3, 2, 3])); // 3
+console.log(mostFrequentElem([2, 2, 1, 1, 1, 2, 2])); // 2
+```
+
+18. **[Running Sum of 1D Array](https://leetcode.com/problems/running-sum-of-1d-array/) ?**
+
+```javascript
+function runningSum(nums) {
+  let arr = [nums[0]];
+  for (let i = 1; i < nums.length; i++) {
+    nums[i] = nums[i] + nums[i - 1];
+    arr.push(nums[i]);
+  }
+  return arr;
+}
+
+console.log(runningSum([1, 2, 3, 4])); // [1,3,6,10]
+console.log(runningSum([1, 1, 1, 1, 1])); // [1,2,3,4,5]
+console.log(runningSum([3, 1, 2, 10, 1])); // [3,4,6,16,17]
 ```
 
 **[⬆ Back to Top](#start-solving-you-will-fall-in-❤️❤️)**
